@@ -19,6 +19,7 @@ export default class Weather extends Component{
   componentDidMount= async (e)=>{
     const api_call = await fetch(`http://api.openweathermap.org/data/2.5/forecast?id=615532&cnt=40&appid=9b41bd9f7384c942d57c1166d2943ce6`);
     const response = await api_call.json();
+    console.log(response)
     if(true){
       this.setState({
         list: response.list,
@@ -36,7 +37,7 @@ export default class Weather extends Component{
     render(){
         return(
             <div className="main">
-                <header>
+               <a href="/"> <header>
                   <button className="celsius" onClick={()=>this.setState({celsius:!this.state.celsius})}
                   ><sup>0</sup>{this.state.celsius?"F":"C"}</button>
                     <div className="about">
@@ -44,11 +45,11 @@ export default class Weather extends Component{
                             <dt><b>country</b></dt>
                             <dd>GEORGIA</dd>
                             <dt><b>coordinates</b></dt>
-                            <dd>41.6941 ; 44.8337 </dd>
+                            <dd>41.6416 ; 41.6359 </dd>
                         </dl>
                         <h1 id="name">{this.state.city}</h1>
                     </div>
-                </header>
+                </header></a>
                   <div className="wrapper">
                              {this.state.list.filter((i,key)=>key%8==0).map((info,key)=> (
                             <Batumi

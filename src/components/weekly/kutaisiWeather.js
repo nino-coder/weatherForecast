@@ -36,7 +36,7 @@ export default class Weather extends Component{
     render(){
         return(
             <div className="main">
-                <header>
+               <a href="/"> <header>
                   <button className="celsius" onClick={()=>this.setState({celsius:!this.state.celsius})}
                   ><sup>0</sup>{this.state.celsius?"F":"C"}</button>
                     <div className="about">
@@ -44,11 +44,11 @@ export default class Weather extends Component{
                             <dt><b>country</b></dt>
                             <dd>GEORGIA</dd>
                             <dt><b>coordinates</b></dt>
-                            <dd>41.6941 ; 44.8337 </dd>
+                            <dd>42.2496 ; 42.6997 </dd>
                         </dl>
                         <h1 id="name">{this.state.city}</h1>
                     </div>
-                </header>
+                </header></a>
                   <div className="wrapper">
                              {this.state.list.filter((i,key)=>key%8==0).map((info,key)=> (
                             <Kutaisi

@@ -11,6 +11,9 @@ body{
 li{
     list-style-type:none;
 }
+a{
+    text-decoration: none;
+}
 @media (min-width:768px){
     header{
         background: url(/static/media/header.1aab1e30.jpg) no-repeat center center;
