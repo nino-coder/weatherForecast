@@ -91,8 +91,8 @@ export default class Weather extends Component{
                   ><sup>0</sup>{this.state.celsius?"F":"C"}</button>
                 </header>
                 <main>
-            <Link to={{pathname:"/tbilisi_weekly_forecast"}} >
-                <Tbilisi
+            <Link to={{pathname:"/tbilisi_weekly_forecast"}} title="weekly weather forecast">
+                <Tbilisi 
                     city={this.state.cityTbilisi}
                     celsius={celsiusTbilisi}
                     cels={this.state.celsius}
@@ -103,7 +103,7 @@ export default class Weather extends Component{
                     date={this.state.date}
                     />
             </Link >
-            <Link to={{pathname:"/kutaisi_weekly_forecast"}}>
+            <Link to={{pathname:"/kutaisi_weekly_forecast"}}  title="weekly weather forecast" >
                 <Kutaisi
                     city={this.state.cityKutaisi}
                     celsius={celsiusKutaisi}
@@ -115,7 +115,7 @@ export default class Weather extends Component{
                     date={this.state.date}
                     />
             </Link>
-            <Link to={{pathname:"/batumi_weekly_forecast"}}>
+            <Link to={{pathname:"/batumi_weekly_forecast"}}  title="weekly weather forecast">
                 <Batumi
                     city={this.state.cityBatumi}
                     celsius={celsiusBatumi}
