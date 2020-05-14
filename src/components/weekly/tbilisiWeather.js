@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
-import DailyWeather from './dailyWeather'
-import './styles.css'
-import axios from 'axios'
+import Tbilisi from '../dailyWeather/tbilisiDaily'
+import '../styles.css' 
+
 export default class Weather extends Component{
     constructor(props){
         super(props);
@@ -34,7 +34,6 @@ export default class Weather extends Component{
       })
     }
   }
-    
     render(){
         return(
             <div className="main">
@@ -53,18 +52,17 @@ export default class Weather extends Component{
                 </header>
                   <div className="wrapper">
                              {this.state.list.filter((i,key)=>key%8==0).map((info,key)=> (
-                            <DailyWeather
-                            celsius = {this.state.celsius}
-                            list={info}
-                            city={this.state.city.name}
-                            country={this.state.country}
-                            humidity={this.state.humidity}
-                            description={this.state.description}
-                            error={this.state.error}
+                            <Tbilisi
+                              celsius = {this.state.celsius}
+                              list={info}
+                              city={this.state.city.name}
+                              country={this.state.country}
+                              humidity={this.state.humidity}
+                              description={this.state.description}
+                              error={this.state.error}
                             />
                     ))} 
                 </div>
-            {/* <DailyWeather data={this.state.data}/> */}
             </div>
         )
     }
