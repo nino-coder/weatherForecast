@@ -16,7 +16,7 @@ a{
 }
 @media (min-width:768px){
     header{
-        background: url(/static/media/header.1aab1e30.jpg) no-repeat center center;
+        background: url(../assets/header.jpg) no-repeat center center;
         color: #fff;
     }
     .wrapper{
@@ -40,7 +40,7 @@ a{
 }
 @media (max-width:767px){
     header{
-        background: url(/static/media/header.1aab1e30.jpg) no-repeat center right;
+        background: url(../assets/header.jpg) no-repeat center right;
         color: darkslategray;
         cursor:pointer;
     }
